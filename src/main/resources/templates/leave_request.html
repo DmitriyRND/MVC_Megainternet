@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding-top: 60px; /* Отступ для навигации */
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: auto; /* Центрирование по горизонтали */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="tel"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/leave-request">Заявка на подключение</a>
+    <a href="tariff-information.html">Информация о тарифах</a>
+    <a href="/request-on-connection">Заявки</a>
+</nav>
+
+<div class="container">
+    <h2>Statement Form</h2>
+    <form action="/leave-request" th:object="${statement}" method="POST">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" th:field="*{fullName}" required>
+        <div th:style="'color:red'" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></div>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" th:field="*{phone}" required>
+        <div th:style="'color:red'" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+
+        <label for="city">City</label>
+        <input type="text" id="city" th:field="*{city}" required>
+        <div th:style="'color:red'" th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></div>
+
+        <label for="street">Street</label>
+        <input type="text" id="street" th:field="*{street}" required>
+        <div th:style="'color:red'" th:if="${#fields.hasErrors('street')}" th:errors="*{street}"></div>
+
+        <label for="houseNumber">House Number</label>
+        <input type="text" id="houseNumber" th:field="*{houseNumber}" required>
+        <div th:style="'color:red'" th:if="${#fields.hasErrors('houseNumber')}" th:errors="*{houseNumber}"></div>
+
+        <label for="tariff">Tariff</label>
+        <select id="tariff" th:field="*{tariff}" required>
+            <option value="BASE">BASE 50 mb</option>
+            <option value="MEDIUM">MEDIUM 100 mb</option>
+            <option value="ULTRA">ULTRA 500 mb</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

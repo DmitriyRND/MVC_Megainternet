@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявки</title>
+    <link rel="stylesheet" href="/css/nav_style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #080808;
+            text-align: left;
+        }
+
+        th {
+            background-color: #c7c09c;
+        }
+
+
+        tr:hover {
+            background-color: #a3914f;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/leave-request">Заявка на подключение</a>
+    <a href="tariff-information.html">Информация о тарифах</a>
+    <a href="/request-on-connection">Заявки</a>
+</nav>
+
+<h1>Заявки</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Полное имя</th>
+        <th>Телефон</th>
+        <th>Город</th>
+        <th>Улица</th>
+        <th>Номер дома</th>
+        <th>Тариф</th>
+        <th>Дата подачи</th>
+        <th>Действие</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="statement : ${statements}">
+        <td th:text="${statement.id}"></td>
+        <td th:text="${statement.fullName}"></td>
+        <td th:text="${statement.phone}"></td>
+        <td th:text="${statement.city}"></td>
+        <td th:text="${statement.street}"></td>
+        <td th:text="${statement.houseNumber}"></td>
+        <td th:text="${statement.tariff}"></td>
+        <td th:text="${statement.localDateTime}"></td>
+        <td>
+            <form th:action="@{/delete}" method="post">
+                <input type="hidden" name="id" th:value="${statement.id}">
+                <button type="submit" class="btn">Удалить</button>
+
+            </form>
+
+
+            <a href="" th:text="'Отказать'" class="btn">Отказать</a>
+            <a href="#" th:text="'Изменить'" class="btn">Изменить</a>
+
+            <a th:href="@{/info_statement(id=${statement.id})}" th:text="'Подробнее'" class="btn">Подробнее</a>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

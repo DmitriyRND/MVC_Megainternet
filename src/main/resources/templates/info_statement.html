@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Данные о заявке</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+        .info label {
+            font-weight: bold;
+        }
+        .description {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .nav-button {
+            flex: 1;
+            margin: 0 5px;
+            background-color: #008CBA; /* Цвет кнопки */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none; /* Убираем границу кнопки */
+            cursor: pointer; /* Указываем, что это кнопка */
+            transition: background-color 0.3s; /* Плавный переход для фона */
+        }
+        .nav-button:hover {
+            background-color: #005f73; /* Цвет кнопки при наведении */
+        }
+        .comments {
+            margin-top: 20px;
+        }
+        .comment {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Данные о заявке</h1>
+    <div class="info">
+        <label>ID:</label>
+        <p th:text="${statement.id}"></p>
+    </div>
+    <div class="info">
+        <label>Полное Имя:</label>
+        <p th:text="${statement.fullName}"></p>
+    </div>
+    <div class="info">
+        <label>Телефон:</label>
+        <p th:text="${statement.phone}"></p>
+    </div>
+    <div class="info">
+
+
+        <label>Город:</label>
+        <p th:text="${statement.city}"></p>
+    </div>
+    <div class="info">
+        <label>Номер дома:</label>
+        <p th:text="${statement.houseNumber}"></p>
+    </div>
+    <div class="info">
+        <label>Тариф:</label>
+        <p th:text="${statement.tariff}"></p>
+    </div>
+    <div class="info">
+        <label>Дата подачи:</label>
+        <p th:text="${statement.localDateTime}"></p>
+    </div>
+    <div class="info">
+        <label>Статус заявки:</label>
+        <p>Тут будет статус </p>
+    </div>
+
+    <div class="description">
+        <label>Описание (оставить комментарии к заявке):</label>
+        <textarea id="commentInput" placeholder="Введите комментарий..."></textarea>
+    </div>
+
+    <button class="button" onclick="saveComment()">Сохранить комментарий</button>
+
+    <!-- Кнопки навигации -->
+    <div class="nav-buttons">
+        <a href="/request-on-connection" class="nav-button">Назад</a>
+        <a href="/" class="nav-button">На главную</a>
+    </div>
+
+    <div class="comments">
+        <h2>Комментарии:</h2>
+        <div id="commentsList"></div>
+    </div>
+</div>
+
+<script>
+    function saveComment() {
+        const commentInput = document.getElementById('commentInput');
+        const commentText = commentInput.value.trim();
+        if (commentText) {
+            // Создать новый элемент для комментария
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment';
+            commentDiv.textContent = commentText;
+
+            // Добавить новый комментарий в список
+            const commentsList = document.getElementById('commentsList');
+            commentsList.appendChild(commentDiv);
+
+            // Очистить поле ввода
+            commentInput.value = '';
+        } else {
+            alert('Пожалуйста, введите комментарий.');
+        }
+    }
+</script>
+</body>
+</html>
