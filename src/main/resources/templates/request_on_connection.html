@@ -30,7 +30,7 @@
 
 <nav>
     <a href="/leave-request">Заявка на подключение</a>
-    <a href="tariff-information.html">Информация о тарифах</a>
+    <a href="tariff_info">Информация о тарифах</a>
     <a href="/request-on-connection">Заявки</a>
 </nav>
 
@@ -45,6 +45,7 @@
         <th>Улица</th>
         <th>Номер дома</th>
         <th>Тариф</th>
+        <th>Текущий статус</th>
         <th>Дата подачи</th>
         <th>Действие</th>
     </tr>
@@ -58,12 +59,25 @@
         <td th:text="${statement.street}"></td>
         <td th:text="${statement.houseNumber}"></td>
         <td th:text="${statement.tariff}"></td>
+        <td th:text="${statement.status}"></td>
         <td th:text="${statement.localDateTime}"></td>
         <td>
             <form th:action="@{/delete}" method="post">
                 <input type="hidden" name="id" th:value="${statement.id}">
                 <button type="submit" class="btn">Удалить</button>
 
+            </form>
+            <form action="/set_status" method="post">
+
+                <input type="hidden" name="id" th:value="${statement.id}">
+                <label for="status">Статус заявки:</label>
+                <select id="status" name="status">
+                    <option value="PENDING">В ожидании</option>
+                    <option value="PROGRESS">В работе</option>
+                    <option value="DECLINED">Отказ</option>
+                </select>
+
+                <button type="submit">Обновить</button>
             </form>
 
 

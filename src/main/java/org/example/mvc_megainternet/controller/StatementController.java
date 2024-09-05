@@ -1,10 +1,11 @@
-package org.example.mvc_applicationforconnection.controller;
+package org.example.mvc_megainternet.controller;
 
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.mvc_applicationforconnection.model.Statement;
-import org.example.mvc_applicationforconnection.service.StatementService;
+
+import org.example.mvc_megainternet.model.Statement;
+import org.example.mvc_megainternet.service.StatementService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -62,6 +63,19 @@ public class StatementController {
         log.info("Delete statement by id " + id);
 
         statementService.deleteById(id);
+        return "redirect:/request-on-connection";
+    }
+
+    @GetMapping("/tariff_info")
+    public String getTariffInfo() {
+        return "tariff_info";
+    }
+
+    @PostMapping("/set_status")
+    public String updateStatus(@RequestParam("status") String status, @RequestParam("id") long id) {
+        Statement statement = statementService.getById(id);
+        statement.assignRequest(status);
+        statementService.saveStatement(statement);
         return "redirect:/request-on-connection";
     }
 

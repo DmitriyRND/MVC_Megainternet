@@ -1,4 +1,4 @@
-package org.example.mvc_applicationforconnection.model;
+package org.example.mvc_megainternet.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
@@ -34,6 +34,9 @@ public class Statement {
     @Enumerated(EnumType.STRING)
     private Tariff tariff;
 
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
 ///4444
     private LocalDateTime localDateTime;
 
@@ -46,10 +49,32 @@ public class Statement {
         this.tariff = tariff;
         this.localDateTime = LocalDateTime.now();
     }
+    public void assignRequest(String nameStatus){
+        switch(nameStatus){
+            case "PENDING":
+                this.status = Status.PENDING;
+                break;
+            case "PROGRESS":
+                this.status = Status.PROGRESS;
+                break;
+            case "DECLINED":
+                this.status = Status.DECLINED;
+                break;
+            default:
+                throw new IllegalArgumentException("Неизвестный статус заявки");
+        }
+    }
 }
 
 enum Tariff{
     BASE,
     MEDIUM,
     ULTRA
+}
+enum Status {
+    PENDING,
+    PROGRESS,
+    DECLINED;
+
+
 }
