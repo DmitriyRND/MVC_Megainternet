@@ -56,7 +56,7 @@ public class StatementController {
         model.addAttribute("statements", statements);
         return "request_on_connection";
     }
-    //
+
 
     @PostMapping("/delete")
     public String deleteStatement(@RequestParam String id) {
