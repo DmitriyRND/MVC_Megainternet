@@ -10,8 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.hibernate.query.sqm.tree.SqmNode.log;
@@ -79,5 +81,13 @@ public class StatementController {
         return "redirect:/request-on-connection";
     }
 
+    @GetMapping("/info_statement")
+    public String getInfoStatement(Model model, @RequestParam ("id") long id) {
+       Statement statement = statementService.getById(id);
+       model.addAttribute(statement);
+        return "info_statement";
+    }
+
 
 }
+
