@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +35,7 @@
         }
         h1 {
             margin: 0;
+            text-align: center; /* Заголовок по центру */
         }
         .container {
             width: 80%;
@@ -62,42 +63,58 @@
             width: 100%;
             bottom: 0;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #080808;
+            text-align: left;
+        }
+        th {
+            background-color: #c7c09c;
+        }
+        tr:hover {
+            background-color: #a3914f;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Тарифы на Подключение Интернета</h1>
-</header>
-
-<!-- Навигационное меню -->
 <nav>
-    <a href="#">Заявка</a>
-    <a href="#">Информация о тарифах</a>
-    <a href="#">Оставить заявку</a>
+    <a href="/leave-request">Заявка на подключение</a>
+    <a href="/tariff_info">Информация о тарифах</a>
+    <a href="/request-on-connection">Заявки</a>
 </nav>
 
+<h1>Тарифы на Подключение Интернета</h1>
 <div class="container">
-    <div class="tariff">
-        <h2>BASE</h2>
-        <p><strong>Скорость:</strong> до 50 Мбит/с</p>
-        <p><strong>Цена:</strong> 500 рублей/месяц</p>
-        <p>Идеально подходит для использования интернета на одном устройстве, просмотра веб-страниц и работы с электронной почтой.</p>
-    </div>
-
-    <div class="tariff">
-        <h2>MEDIUM</h2>
-        <p><strong>Скорость:</strong> до 100 Мбит/с</p>
-        <p><strong>Цена:</strong> 800 рублей/месяц</p>
-        <p>Подходит для использования на нескольких устройствах, потоковой передачи HD-видео и онлайн-игр.</p>
-    </div>
-
-    <div class="tariff">
-        <h2>ULTRA</h2>
-        <p><strong>Скорость:</strong> до 500 Мбит/с</p>
-        <p><strong>Цена:</strong> 1200 рублей/месяц</p>
-        <p>Лучший выбор для больших семей и активных пользователей, идеально подходит для работы с большим трафиком и онлайн-трансляциями.</p>
-    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Тариф</th>
+            <th>Тип подключения</th>
+            <th>Цена</th>
+            <th>Скорость</th>
+            <th>Лимит по трафику</th>
+            <th>Акции</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tariffInfo : ${tariffInfos}">
+            <td th:text="${tariffInfo.id}"></td>
+            <td th:text="${tariffInfo.tariffName}"></td>
+            <td th:text="${tariffInfo.connectionType}"></td>
+            <td th:text="${tariffInfo.price}"></td>
+            <td th:text="${tariffInfo.speed}"></td>
+            <td th:text="${tariffInfo.dataLimit}"></td>
+            <td th:text="${tariffInfo.stock}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 <footer>

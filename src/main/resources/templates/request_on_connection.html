@@ -5,22 +5,77 @@
     <title>Заявки</title>
     <link rel="stylesheet" href="/css/nav_style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+        nav {
+            background-color: #1e90ff; /* Синий фон */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            margin: 0;
+            text-align: center; /* Заголовок по центру */
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .tariff {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tariff h2 {
+            margin-top: 0;
+        }
+        .tariff p {
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
-
         th, td {
             padding: 10px;
             border: 1px solid #080808;
             text-align: left;
         }
-
         th {
             background-color: #c7c09c;
         }
-
-
         tr:hover {
             background-color: #a3914f;
         }

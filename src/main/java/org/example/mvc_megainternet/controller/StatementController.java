@@ -66,10 +66,10 @@ public class StatementController {
         return "redirect:/request-on-connection";
     }
 
-    @GetMapping("/tariff_info")
-    public String getTariffInfo() {
-        return "tariff_info";
-    }
+//    @GetMapping("/tariff_info")
+//    public String getTariffInfo() {
+//        return "tariff_info";
+//    }
 
     @PostMapping("/set_status")
     public String updateStatus(@RequestParam("status") String status, @RequestParam("id") long id) {
