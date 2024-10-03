@@ -3,7 +3,7 @@ package org.example.mvc_megainternet.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -37,7 +37,7 @@ public class Statement {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-///4444
+///
     private LocalDateTime localDateTime;
 
     public Statement(String fullName, String phone, String city, String street, String houseNumber, Tariff tariff) {

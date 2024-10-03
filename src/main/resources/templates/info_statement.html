@@ -84,6 +84,24 @@
             padding: 10px;
             border-radius: 4px;
             margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .delete-button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-button:hover {
+            background-color: #d32f2f;
         }
     </style>
 </head>
@@ -103,12 +121,11 @@
         <p th:text="${statement.phone}"></p>
     </div>
     <div class="info">
-
-
         <label>Город:</label>
         <p th:text="${statement.city}"></p>
     </div>
     <div class="info">
+
         <label>Номер дома:</label>
         <p th:text="${statement.houseNumber}"></p>
     </div>
@@ -122,7 +139,7 @@
     </div>
     <div class="info">
         <label>Статус заявки:</label>
-        <p>Тут будет статус </p>
+        <p th:text="${statement.status}"></p>
     </div>
 
     <div class="description">
@@ -145,25 +162,56 @@
 </div>
 
 <script>
+    // Массив для хранения комментариев
+    let comments = [];
+
+    // Функция для сохранения комментария
     function saveComment() {
-        const commentInput = document.getElementById('commentInput');
-        const commentText = commentInput.value.trim();
-        if (commentText) {
-            // Создать новый элемент для комментария
-            const commentDiv = document.createElement('div');
-            commentDiv.className = 'comment';
-            commentDiv.textContent = commentText;
+        let commentInput = document.getElementById("commentInput");
+        let comment = commentInput.value.trim();
 
-            // Добавить новый комментарий в список
-            const commentsList = document.getElementById('commentsList');
-            commentsList.appendChild(commentDiv);
-
-            // Очистить поле ввода
-            commentInput.value = '';
-        } else {
-            alert('Пожалуйста, введите комментарий.');
+        if (comment !== "") {
+            comments.push(comment);
+            renderComments();
+            commentInput.value = "";
         }
     }
+
+    // Функция для отображения комментариев
+    function renderComments() {
+        let commentsContainer = document.getElementById("commentsList");
+        commentsContainer.innerHTML = "";
+
+        comments.forEach(function(comment, index) {
+            let commentElement = document.createElement("div");
+            commentElement.classList.add("comment");
+
+            let commentText = document.createElement("div");
+            commentText.textContent = comment;
+
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Удалить";
+            deleteButton.classList.add("delete-button");
+            deleteButton.onclick = function() {
+                deleteComment(index);
+            };
+
+            commentElement.appendChild(commentText);
+            commentElement.appendChild(deleteButton);
+            commentsContainer.appendChild(commentElement);
+        });
+    }
+
+    // Функция для удаления комментария
+    function deleteComment(index) {
+        comments.splice(index, 1);
+        renderComments();
+    }
+
+    // Загрузка комментариев при загрузке страницы
+    window.onload = function() {
+        renderComments();
+    };
 </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-09-10T19:52:48.005+03:00  INFO 18240 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 17.0.12 with PID 18240 (C:\Users\Анд\IdeaProjects\MVC_Megainternet\target\classes started by Анд in C:\Users\Анд\IdeaProjects\MVC_Megainternet)
 2024-09-10T19:52:48.014+03:00  INFO 18240 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
 2024-09-10T19:52:49.351+03:00  INFO 18240 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -23,6 +24,23 @@
 2024-09-10T19:52:55.185+03:00  INFO 18240 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 2024-09-10T19:52:55.187+03:00  INFO 18240 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
 2024-09-10T19:52:55.216+03:00  INFO 18240 --- [MVC_Meganet] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+=======
+2024-09-09T19:57:56.878+03:00  INFO 3180 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 3180 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T19:57:56.884+03:00  INFO 3180 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T19:57:57.653+03:00  INFO 3180 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T19:57:57.718+03:00  INFO 3180 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2024-09-09T19:57:58.227+03:00  INFO 3180 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T19:57:58.240+03:00  INFO 3180 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T19:57:58.241+03:00  INFO 3180 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T19:57:58.295+03:00  INFO 3180 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T19:57:58.295+03:00  INFO 3180 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1364 ms
+2024-09-09T19:57:58.455+03:00  INFO 3180 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T19:57:58.581+03:00  INFO 3180 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T19:57:58.630+03:00  INFO 3180 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T19:57:59.079+03:00  INFO 3180 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T19:57:59.110+03:00  INFO 3180 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T19:58:00.194+03:00  WARN 3180 --- [MVC_Meganet] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+>>>>>>> master
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2024-09-10T19:52:55.242+03:00 ERROR 18240 --- [MVC_Meganet] [main] o.s.boot.SpringApplication               : Application run failed
@@ -48,6 +66,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
 	at org.example.mvc_megainternet.MvcMegainternetApplication.main(MvcMegainternetApplication.java:10) ~[classes/:na]
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tariffInfoService' defined in file [C:\Users\Анд\IdeaProjects\MVC_Megainternet\target\classes\org\example\mvc_megainternet\service\TariffInfoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'tariffInfoRepository' defined in org.example.mvc_megainternet.repository.TariffInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List org.example.mvc_megainternet.repository.TariffInfoRepository.findByNameTariff(java.lang.String); Reason: Failed to create query for method public abstract java.util.List org.example.mvc_megainternet.repository.TariffInfoRepository.findByNameTariff(java.lang.String); No property 'nameTariff' found for type 'TariffInfo'
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.12.jar:6.1.12]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.12.jar:6.1.12]
@@ -66,6 +85,18 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.12.jar:6.1.12]
 	... 19 common frames omitted
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tariffInfoRepository' defined in org.example.mvc_megainternet.repository.TariffInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List org.example.mvc_megainternet.repository.TariffInfoRepository.findByNameTariff(java.lang.String); Reason: Failed to create query for method public abstract java.util.List org.example.mvc_megainternet.repository.TariffInfoRepository.findByNameTariff(java.lang.String); No property 'nameTariff' found for type 'TariffInfo'
+=======
+
+2024-09-09T19:58:00.199+03:00 ERROR 3180 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-09-09T19:58:00.200+03:00  WARN 3180 --- [MVC_Meganet] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-09-09T19:58:00.203+03:00  INFO 3180 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-09T19:58:00.216+03:00  INFO 3180 --- [MVC_Meganet] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-09T19:58:00.237+03:00 ERROR 3180 --- [MVC_Meganet] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+>>>>>>> master
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.12.jar:6.1.12]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
@@ -272,6 +303,7 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101) ~[spring-data-jpa-3.3.3.jar:3.3.3]
 	... 60 common frames omitted
 
+<<<<<<< HEAD
 2024-09-10T19:57:44.938+03:00  INFO 4380 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 17.0.12 with PID 4380 (C:\Users\Анд\IdeaProjects\MVC_Megainternet\target\classes started by Анд in C:\Users\Анд\IdeaProjects\MVC_Megainternet)
 2024-09-10T19:57:44.942+03:00  INFO 4380 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
 2024-09-10T19:57:46.092+03:00  INFO 4380 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -686,6 +718,167 @@ org.example.mvc_megainternet.controller.StatementController#index() mapped.
 org.thymeleaf.exceptions.TemplateInputException: Error resolving template [tariff_info], template might not exist or might not be accessible by any of the configured Template Resolvers
 	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
 	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+=======
+2024-09-09T19:58:27.840+03:00  INFO 5344 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 5344 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T19:58:27.842+03:00  INFO 5344 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T19:58:28.335+03:00  INFO 5344 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T19:58:28.376+03:00  INFO 5344 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2024-09-09T19:58:28.784+03:00  INFO 5344 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T19:58:28.794+03:00  INFO 5344 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T19:58:28.794+03:00  INFO 5344 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T19:58:28.835+03:00  INFO 5344 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T19:58:28.835+03:00  INFO 5344 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 957 ms
+2024-09-09T19:58:28.944+03:00  INFO 5344 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T19:58:28.987+03:00  INFO 5344 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T19:58:29.017+03:00  INFO 5344 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T19:58:29.268+03:00  INFO 5344 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T19:58:29.289+03:00  INFO 5344 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T19:58:30.154+03:00  INFO 5344 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e0294a7
+2024-09-09T19:58:30.155+03:00  INFO 5344 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T19:58:31.143+03:00  INFO 5344 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T19:58:31.353+03:00  INFO 5344 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T19:58:31.690+03:00  INFO 5344 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T19:58:31.755+03:00  WARN 5344 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T19:58:31.783+03:00  INFO 5344 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T19:58:32.226+03:00  INFO 5344 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T19:58:32.232+03:00  INFO 5344 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 4.773 seconds (process running for 5.215)
+2024-09-09T19:58:44.299+03:00  INFO 5344 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T19:58:44.299+03:00  INFO 5344 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T19:58:44.300+03:00  INFO 5344 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-09T19:59:19.493+03:00  INFO 5344 --- [MVC_Meganet] [http-nio-8090-exec-1] org.hibernate.query.sqm.tree.SqmNode     : Delete statement by id 1
+2024-09-09T20:05:07.101+03:00  INFO 5344 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:05:07.103+03:00  INFO 5344 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:05:07.111+03:00  INFO 5344 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:05:10.722+03:00  INFO 12156 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 12156 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:05:10.724+03:00  INFO 12156 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:05:11.234+03:00  INFO 12156 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:05:11.275+03:00  INFO 12156 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2024-09-09T20:05:11.646+03:00  INFO 12156 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:05:11.657+03:00  INFO 12156 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:05:11.657+03:00  INFO 12156 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:05:11.698+03:00  INFO 12156 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:05:11.698+03:00  INFO 12156 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 943 ms
+2024-09-09T20:05:11.807+03:00  INFO 12156 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:05:11.848+03:00  INFO 12156 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:05:11.877+03:00  INFO 12156 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:05:12.121+03:00  INFO 12156 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:05:12.143+03:00  INFO 12156 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:05:12.396+03:00  INFO 12156 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e0294a7
+2024-09-09T20:05:12.398+03:00  INFO 12156 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:05:13.128+03:00  INFO 12156 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:05:13.211+03:00  INFO 12156 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:05:13.423+03:00  INFO 12156 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:05:13.465+03:00  WARN 12156 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:05:13.482+03:00  INFO 12156 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:05:13.757+03:00  INFO 12156 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:05:13.764+03:00  INFO 12156 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.398 seconds (process running for 3.863)
+2024-09-09T20:05:18.920+03:00  INFO 12156 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:05:18.920+03:00  INFO 12156 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:05:18.921+03:00  INFO 12156 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-09T20:05:51.850+03:00  INFO 12156 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:05:51.852+03:00  INFO 12156 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:05:51.856+03:00  INFO 12156 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:06:28.106+03:00  INFO 4404 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 4404 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:06:28.108+03:00  INFO 4404 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:06:28.587+03:00  INFO 4404 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:06:28.633+03:00  INFO 4404 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2024-09-09T20:06:29.007+03:00  INFO 4404 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:06:29.018+03:00  INFO 4404 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:06:29.018+03:00  INFO 4404 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:06:29.059+03:00  INFO 4404 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:06:29.059+03:00  INFO 4404 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 919 ms
+2024-09-09T20:06:29.163+03:00  INFO 4404 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:06:29.205+03:00  INFO 4404 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:06:29.237+03:00  INFO 4404 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:06:29.491+03:00  INFO 4404 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:06:29.511+03:00  INFO 4404 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:06:29.752+03:00  INFO 4404 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b79ff1c
+2024-09-09T20:06:29.754+03:00  INFO 4404 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:06:30.505+03:00  INFO 4404 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:06:30.569+03:00  INFO 4404 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:06:30.797+03:00  INFO 4404 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:06:30.842+03:00  WARN 4404 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:06:30.859+03:00  INFO 4404 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:06:31.130+03:00  INFO 4404 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:06:31.136+03:00  INFO 4404 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.421 seconds (process running for 3.862)
+2024-09-09T20:06:36.951+03:00  INFO 4404 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:06:36.951+03:00  INFO 4404 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:06:36.952+03:00  INFO 4404 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-09T20:06:57.321+03:00  INFO 4404 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:06:57.322+03:00  INFO 4404 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:06:57.327+03:00  INFO 4404 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:07:04.704+03:00  INFO 1172 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 1172 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:07:04.705+03:00  INFO 1172 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:07:05.195+03:00  INFO 1172 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:07:05.236+03:00  INFO 1172 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2024-09-09T20:07:05.610+03:00  INFO 1172 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:07:05.621+03:00  INFO 1172 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:07:05.621+03:00  INFO 1172 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:07:05.662+03:00  INFO 1172 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:07:05.663+03:00  INFO 1172 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 925 ms
+2024-09-09T20:07:05.773+03:00  INFO 1172 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:07:05.818+03:00  INFO 1172 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:07:05.847+03:00  INFO 1172 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:07:06.087+03:00  INFO 1172 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:07:06.108+03:00  INFO 1172 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:07:06.346+03:00  INFO 1172 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c08c787
+2024-09-09T20:07:06.348+03:00  INFO 1172 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:07:07.087+03:00  INFO 1172 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:07:07.180+03:00  INFO 1172 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:07:07.409+03:00  INFO 1172 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:07:07.453+03:00  WARN 1172 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:07:07.470+03:00  INFO 1172 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:07:07.744+03:00  INFO 1172 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:07:07.750+03:00  INFO 1172 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.442 seconds (process running for 3.887)
+2024-09-09T20:07:13.521+03:00  INFO 1172 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:07:13.521+03:00  INFO 1172 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:07:13.522+03:00  INFO 1172 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-09T20:08:18.221+03:00  INFO 1172 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:08:18.222+03:00  INFO 1172 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:08:18.227+03:00  INFO 1172 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:08:21.460+03:00  INFO 8996 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 8996 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:08:21.462+03:00  INFO 8996 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:08:21.952+03:00  INFO 8996 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:08:21.998+03:00  INFO 8996 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2024-09-09T20:08:22.371+03:00  INFO 8996 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:08:22.381+03:00  INFO 8996 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:08:22.381+03:00  INFO 8996 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:08:22.422+03:00  INFO 8996 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:08:22.422+03:00  INFO 8996 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 927 ms
+2024-09-09T20:08:22.529+03:00  INFO 8996 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:08:22.571+03:00  INFO 8996 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:08:22.600+03:00  INFO 8996 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:08:22.843+03:00  INFO 8996 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:08:22.863+03:00  INFO 8996 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:08:23.103+03:00  INFO 8996 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@527d48db
+2024-09-09T20:08:23.105+03:00  INFO 8996 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:08:23.842+03:00  INFO 8996 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:08:23.899+03:00  INFO 8996 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:08:24.128+03:00  INFO 8996 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:08:24.170+03:00  WARN 8996 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:08:24.188+03:00  INFO 8996 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:08:24.456+03:00  INFO 8996 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:08:24.463+03:00  INFO 8996 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.37 seconds (process running for 3.839)
+2024-09-09T20:08:28.860+03:00  INFO 8996 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:08:28.860+03:00  INFO 8996 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:08:28.861+03:00  INFO 8996 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-09T20:08:37.104+03:00 ERROR 8996 --- [MVC_Meganet] [http-nio-8090-exec-3] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8090-exec-3] Exception processing template "info_statement": Exception evaluating SpringEL expression: "statement.id" (template: "info_statement" - line 95, col 12)
+
+org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "statement.id" (template: "info_statement" - line 95, col 12)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+>>>>>>> master
 	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
 	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
 	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
@@ -731,6 +924,7 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [tarif
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
 2024-09-10T22:22:38.456+03:00  INFO 1028 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -852,3 +1046,202 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [tarif
 2024-09-10T22:36:25.486+03:00  INFO 8228 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-09-10T22:36:25.491+03:00  INFO 8228 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-09-10T22:36:25.507+03:00  INFO 8228 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+=======
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 58 common frames omitted
+
+2024-09-09T20:08:37.107+03:00 ERROR 8996 --- [MVC_Meganet] [http-nio-8090-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "statement.id" (template: "info_statement" - line 95, col 12)] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338) ~[spring-expression-6.1.12.jar:6.1.12]
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2024-09-09T20:08:43.145+03:00  INFO 8996 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:08:43.146+03:00  INFO 8996 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:08:43.151+03:00  INFO 8996 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:08:46.423+03:00  INFO 2124 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 2124 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:08:46.425+03:00  INFO 2124 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:08:46.925+03:00  INFO 2124 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:08:46.967+03:00  INFO 2124 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2024-09-09T20:08:47.352+03:00  INFO 2124 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:08:47.361+03:00  INFO 2124 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:08:47.362+03:00  INFO 2124 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:08:47.403+03:00  INFO 2124 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:08:47.403+03:00  INFO 2124 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 946 ms
+2024-09-09T20:08:47.522+03:00  INFO 2124 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:08:47.565+03:00  INFO 2124 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:08:47.592+03:00  INFO 2124 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:08:47.840+03:00  INFO 2124 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:08:47.861+03:00  INFO 2124 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:08:48.112+03:00  INFO 2124 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71b3ba5a
+2024-09-09T20:08:48.114+03:00  INFO 2124 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:08:48.871+03:00  INFO 2124 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:08:48.937+03:00  INFO 2124 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:08:49.159+03:00  INFO 2124 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:08:49.206+03:00  WARN 2124 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:08:49.225+03:00  INFO 2124 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:08:49.503+03:00  INFO 2124 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:08:49.509+03:00  INFO 2124 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.442 seconds (process running for 3.875)
+2024-09-09T20:08:49.887+03:00  INFO 2124 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:08:49.887+03:00  INFO 2124 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:08:49.889+03:00  INFO 2124 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-09-09T20:14:30.256+03:00  INFO 2124 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:14:30.258+03:00  INFO 2124 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:14:30.265+03:00  INFO 2124 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:14:32.733+03:00  INFO 4208 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 4208 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:14:32.734+03:00  INFO 4208 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:14:33.236+03:00  INFO 4208 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:14:33.277+03:00  INFO 4208 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2024-09-09T20:14:33.648+03:00  INFO 4208 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:14:33.658+03:00  INFO 4208 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:14:33.659+03:00  INFO 4208 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:14:33.699+03:00  INFO 4208 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:14:33.699+03:00  INFO 4208 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 928 ms
+2024-09-09T20:14:33.807+03:00  INFO 4208 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:14:33.850+03:00  INFO 4208 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:14:33.879+03:00  INFO 4208 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:14:34.126+03:00  INFO 4208 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:14:34.147+03:00  INFO 4208 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:14:34.392+03:00  INFO 4208 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3451fc88
+2024-09-09T20:14:34.393+03:00  INFO 4208 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:14:35.145+03:00  INFO 4208 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:14:35.270+03:00  INFO 4208 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:14:35.481+03:00  INFO 4208 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:14:35.522+03:00  WARN 4208 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:14:35.540+03:00  INFO 4208 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:14:35.809+03:00  INFO 4208 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:14:35.815+03:00  INFO 4208 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.444 seconds (process running for 3.882)
+2024-09-09T20:14:41.514+03:00  INFO 4208 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:14:41.514+03:00  INFO 4208 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:14:41.515+03:00  INFO 4208 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-09T20:21:30.861+03:00  INFO 4208 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:21:30.864+03:00  INFO 4208 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:21:30.871+03:00  INFO 4208 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:21:34.357+03:00  INFO 14168 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 14168 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:21:34.359+03:00  INFO 14168 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:21:34.888+03:00  INFO 14168 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:21:34.930+03:00  INFO 14168 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interface.
+2024-09-09T20:21:35.315+03:00  INFO 14168 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:21:35.327+03:00  INFO 14168 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:21:35.327+03:00  INFO 14168 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:21:35.369+03:00  INFO 14168 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:21:35.370+03:00  INFO 14168 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 978 ms
+2024-09-09T20:21:35.485+03:00  INFO 14168 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:21:35.530+03:00  INFO 14168 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:21:35.560+03:00  INFO 14168 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:21:35.808+03:00  INFO 14168 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:21:35.830+03:00  INFO 14168 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:21:36.075+03:00  INFO 14168 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b79ff1c
+2024-09-09T20:21:36.077+03:00  INFO 14168 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:21:36.880+03:00  INFO 14168 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:21:36.984+03:00  INFO 14168 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:21:37.170+03:00  INFO 14168 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:21:37.265+03:00  WARN 14168 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:21:37.283+03:00  INFO 14168 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:21:37.570+03:00  INFO 14168 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:21:37.577+03:00  INFO 14168 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.609 seconds (process running for 4.078)
+2024-09-09T20:21:44.167+03:00  INFO 14168 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:21:44.167+03:00  INFO 14168 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:21:44.168+03:00  INFO 14168 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-09T20:21:54.840+03:00  WARN 14168 --- [MVC_Meganet] [http-nio-8090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type long is not present]
+2024-09-09T20:22:11.089+03:00  INFO 14168 --- [MVC_Meganet] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:22:11.090+03:00  INFO 14168 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-09T20:22:11.096+03:00  INFO 14168 --- [MVC_Meganet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-09T20:22:14.231+03:00  INFO 9884 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Starting MvcMegainternetApplication using Java 20.0.2 with PID 9884 (C:\Users\Kostya\Downloads\MVC_Megainternet\target\classes started by Kostya in C:\Users\Kostya\Downloads\MVC_Megainternet)
+2024-09-09T20:22:14.233+03:00  INFO 9884 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T20:22:14.718+03:00  INFO 9884 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T20:22:14.759+03:00  INFO 9884 --- [MVC_Meganet] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2024-09-09T20:22:15.151+03:00  INFO 9884 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-09-09T20:22:15.162+03:00  INFO 9884 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09T20:22:15.162+03:00  INFO 9884 --- [MVC_Meganet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-09T20:22:15.204+03:00  INFO 9884 --- [MVC_Meganet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09T20:22:15.204+03:00  INFO 9884 --- [MVC_Meganet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 939 ms
+2024-09-09T20:22:15.316+03:00  INFO 9884 --- [MVC_Meganet] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T20:22:15.363+03:00  INFO 9884 --- [MVC_Meganet] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T20:22:15.393+03:00  INFO 9884 --- [MVC_Meganet] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T20:22:15.645+03:00  INFO 9884 --- [MVC_Meganet] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T20:22:15.666+03:00  INFO 9884 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T20:22:15.913+03:00  INFO 9884 --- [MVC_Meganet] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c08c787
+2024-09-09T20:22:15.915+03:00  INFO 9884 --- [MVC_Meganet] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T20:22:16.673+03:00  INFO 9884 --- [MVC_Meganet] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T20:22:16.735+03:00  INFO 9884 --- [MVC_Meganet] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T20:22:16.947+03:00  INFO 9884 --- [MVC_Meganet] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-09T20:22:16.989+03:00  WARN 9884 --- [MVC_Meganet] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T20:22:17.006+03:00  INFO 9884 --- [MVC_Meganet] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-09T20:22:17.272+03:00  INFO 9884 --- [MVC_Meganet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2024-09-09T20:22:17.279+03:00  INFO 9884 --- [MVC_Meganet] [main] o.e.m.MvcMegainternetApplication         : Started MvcMegainternetApplication in 3.407 seconds (process running for 3.842)
+2024-09-09T20:22:17.926+03:00  INFO 9884 --- [MVC_Meganet] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09T20:22:17.926+03:00  INFO 9884 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-09T20:22:17.927+03:00  INFO 9884 --- [MVC_Meganet] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+>>>>>>> master
