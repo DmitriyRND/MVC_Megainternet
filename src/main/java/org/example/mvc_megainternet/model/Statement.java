@@ -37,7 +37,7 @@ public class Statement {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-///
+////
     private LocalDateTime localDateTime;
 
     public Statement(String fullName, String phone, String city, String street, String houseNumber, Tariff tariff) {
