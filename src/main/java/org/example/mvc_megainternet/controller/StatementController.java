@@ -4,7 +4,11 @@ package org.example.mvc_megainternet.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
+import org.example.mvc_megainternet.model.Comment;
 import org.example.mvc_megainternet.model.Statement;
+
+
+
 import org.example.mvc_megainternet.service.StatementService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,8 +49,9 @@ public class StatementController {
         }
 
         statement.setLocalDateTime(LocalDateTime.now());
-        statementService.saveStatement(statement);
+        statement.setStatus(statement.setDefaultStatus());
 
+        statementService.saveStatement(statement);
         model.addAttribute("name", statement.getFullName());
         model.addAttribute("phone", statement.getPhone());
         return "accept";
@@ -58,6 +63,7 @@ public class StatementController {
         model.addAttribute("statements", statements);
         return "request_on_connection";
     }
+
 
 
     @PostMapping("/delete")
@@ -82,12 +88,30 @@ public class StatementController {
     }
 
     @GetMapping("/info_statement")
-    public String getInfoStatement(Model model, @RequestParam ("id") long id) {
+    public String getInfoStatement(Model model,
+                                   @RequestParam ("id") long id,
+                                   @RequestParam(name = "comment",required = false) String commentMessage)  {
+        Comment comment = new Comment();
+        comment.setText(commentMessage);
+        comment.setDate(LocalDateTime.now());
+
        Statement statement = statementService.getById(id);
+
+       comment.setStatement(statement);
+       statement.addComment(comment);
+
+       statementService.saveStatement(statement);
        model.addAttribute(statement);
         return "info_statement";
     }
 
+//    @RequestMapping(value = "/info_statement", method = RequestMethod.POST)
+//    public String addComment(Model model, @ModelAttribute("comment") Comment comment,  @RequestParam ("id") long id) {
+//        Statement statement = statementService.getById(id);
+//        statement.addComment(comment);
+//        model.addAttribute("newComment",comment);
+//        statementService.saveStatement(statement);
 
+//    }
 }
 

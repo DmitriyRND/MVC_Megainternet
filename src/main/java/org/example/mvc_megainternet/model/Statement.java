@@ -5,11 +5,16 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Statement {
     @Id
@@ -40,7 +45,10 @@ public class Statement {
 ///
     private LocalDateTime localDateTime;
 
-    public Statement(String fullName, String phone, String city, String street, String houseNumber, Tariff tariff) {
+    @OneToMany(mappedBy = "statement",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private List<Comment> comments;
+
+    public Statement(String fullName, String phone, String city, String street, String houseNumber, Tariff tariff, Status status) {
         this.fullName = fullName;
         this.phone = phone;
         this.city = city;
@@ -48,7 +56,22 @@ public class Statement {
         this.houseNumber = houseNumber;
         this.tariff = tariff;
         this.localDateTime = LocalDateTime.now();
+        this.status = status;
     }
+
+    public Status setDefaultStatus() {
+        return Status.PENDING;
+    }
+
+public void addComment(Comment comment) {
+        comments.add(comment);
+}
+
+public void removeComment(Comment comment) {
+        comments.remove(comment);
+}
+
+
     public void assignRequest(String nameStatus){
         switch(nameStatus){
             case "PENDING":
@@ -64,6 +87,7 @@ public class Statement {
                 throw new IllegalArgumentException("Неизвестный статус заявки");
         }
     }
+
 }
 
 enum Tariff{
@@ -71,10 +95,9 @@ enum Tariff{
     MEDIUM,
     ULTRA
 }
-enum Status {
+ enum  Status {
     PENDING,
     PROGRESS,
     DECLINED;
-
 
 }

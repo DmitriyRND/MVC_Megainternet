@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
@@ -24,6 +25,12 @@ public class TariffInfoController {
     @GetMapping("/tariff_info")
     public String getViewRequest(Model model) {
         List<TariffInfo> tariffInfos = tariffInfoService.getAllTariffs();
+        tariffInfos = tariffInfos.stream()
+                .peek(e-> System.out.println(e))
+                .sorted(Comparator.comparing(TariffInfo::getPrice))
+                .toList();
+
+
         model.addAttribute("tariffInfos", tariffInfos);
         return "tariff_info";
     }

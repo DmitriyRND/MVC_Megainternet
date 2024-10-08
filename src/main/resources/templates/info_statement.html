@@ -142,12 +142,15 @@
         <p th:text="${statement.status}"></p>
     </div>
 
-    <div class="description">
-        <label>Описание (оставить комментарии к заявке):</label>
-        <textarea id="commentInput" placeholder="Введите комментарий..."></textarea>
-    </div>
 
-    <button class="button" onclick="saveComment()">Сохранить комментарий</button>
+    <form action="/info_statement" method="POST">
+        <input type="hidden" name="id" th:value="${statement.getId()}">
+        <div class="description">
+            <label for="commentInput">Описание (оставить комментарий к заявке):</label>
+            <textarea id="commentInput"  name="comment" placeholder="Введите комментарий..."></textarea>
+        </div>
+        <button type="submit" class="button">Сохранить комментарий</button>
+    </form>
 
     <!-- Кнопки навигации -->
     <div class="nav-buttons">
@@ -157,61 +160,35 @@
 
     <div class="comments">
         <h2>Комментарии:</h2>
-        <div id="commentsList"></div>
+        <div id="commentsList">
+            <ul>
+                <!-- Итерация по коллекции комментариев -->
+                <li th:each="comment : ${statement.comments}">
+<!--                    <strong th:text="${comment.author}">Имя автора</strong> &lt;!&ndash; Отображение автора &ndash;&gt;-->
+                    <p th:text="${comment.text}">Текст комментария</p> <!-- Отображение текста комментария -->
+                    <span th:text="${#temporals.format(comment.date, 'dd.MM.yyyy HH:mm')}">Дата</span>
+                    <!-- Отображение даты -->
+                </li>
+            </ul>
+        </div>
     </div>
+
+    <p>Добавлен новый комментарий: <span th:text="${statement.comments[0].text}"></span></p> <!-- Отображение последнего добавленного комментария -->
+
+
+
 </div>
 
 <script>
-    // Массив для хранения комментариев
-    let comments = [];
 
-    // Функция для сохранения комментария
-    function saveComment() {
-        let commentInput = document.getElementById("commentInput");
-        let comment = commentInput.value.trim();
+</script>
+</body>
+</html>
 
-        if (comment !== "") {
-            comments.push(comment);
-            renderComments();
-            commentInput.value = "";
-        }
-    }
 
-    // Функция для отображения комментариев
-    function renderComments() {
-        let commentsContainer = document.getElementById("commentsList");
-        commentsContainer.innerHTML = "";
 
-        comments.forEach(function(comment, index) {
-            let commentElement = document.createElement("div");
-            commentElement.classList.add("comment");
+<script>
 
-            let commentText = document.createElement("div");
-            commentText.textContent = comment;
-
-            let deleteButton = document.createElement("button");
-            deleteButton.textContent = "Удалить";
-            deleteButton.classList.add("delete-button");
-            deleteButton.onclick = function() {
-                deleteComment(index);
-            };
-
-            commentElement.appendChild(commentText);
-            commentElement.appendChild(deleteButton);
-            commentsContainer.appendChild(commentElement);
-        });
-    }
-
-    // Функция для удаления комментария
-    function deleteComment(index) {
-        comments.splice(index, 1);
-        renderComments();
-    }
-
-    // Загрузка комментариев при загрузке страницы
-    window.onload = function() {
-        renderComments();
-    };
 </script>
 </body>
 </html>
