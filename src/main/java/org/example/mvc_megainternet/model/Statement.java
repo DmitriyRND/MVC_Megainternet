@@ -42,7 +42,7 @@ public class Statement {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-///
+////
     private LocalDateTime localDateTime;
 
     @OneToMany(mappedBy = "statement",fetch = FetchType.EAGER,cascade = CascadeType.ALL)

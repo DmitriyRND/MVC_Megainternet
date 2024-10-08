@@ -5,7 +5,7 @@ CREATE TABLE TariffInfo (
                             connection_type VARCHAR(255) NOT NULL,
                             price INT NOT NULL,
                             speed INT NOT NULL,
-                            data_limit INT NOT NULL,
+
                             stock VARCHAR(255)
 );
 

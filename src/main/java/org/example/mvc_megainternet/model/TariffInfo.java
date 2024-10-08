@@ -17,7 +17,6 @@ public class TariffInfo {
     private String connectionType;
     private int price;
     private int speed;
-    private int dataLimit;
     private String stock;
 
 
