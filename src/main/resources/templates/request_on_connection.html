@@ -87,6 +87,7 @@
     <a href="/leave-request">Заявка на подключение</a>
     <a href="tariff_info">Информация о тарифах</a>
     <a href="/request-on-connection">Заявки</a>
+    <a href="/admin_log">Админ панель</a>
 </nav>
 
 <h1>Заявки</h1>
@@ -129,14 +130,14 @@
                 <select id="status" name="status">
                     <option value="PENDING">В ожидании</option>
                     <option value="PROGRESS">В работе</option>
-                    <option value="DECLINED">Отказ</option>
+
                 </select>
 
                 <button type="submit">Обновить</button>
             </form>
 
 
-            <a href="" th:text="'Отказать'" class="btn">Отказать</a>
+
             <a href="#" th:text="'Изменить'" class="btn">Изменить</a>
 
             <a th:href="@{/info_statement(id=${statement.id})}" th:text="'Подробнее'" class="btn">Подробнее</a>
