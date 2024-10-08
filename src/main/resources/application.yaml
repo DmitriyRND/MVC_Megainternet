@@ -13,14 +13,14 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-
-logging:
-  level:
-    root: info
-    org.example.mvc_applicationforconnection.controller.StatementController: error
-  file:
-    name: logs/app.log
+#
+#
+#logging:
+#  level:
+#    root: info
+#    org.example.mvc_applicationforconnection.controller.StatementController: error
+#  file:
+#    name: logs/app.log
 
 server:
   port: 8090
